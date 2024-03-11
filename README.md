@@ -10,13 +10,20 @@ component gulo show korar jonno main terminal holo App.jsx
 
 4. <h3>Name : {name?.common}</h3> name paile pore code e jabe
 
-4.const [visited, setVisited] = useState(false);
+5. const [visited, setVisited] = useState(false);
     const handleVisited = () => {
         setVisited(!visited);
     } toggle koar jonno use kora hoy
 
 
+6. hold(by state) tiger(btn function) fire (by btn)
 
+7.     const [visitedCountries, setVisitedCountries] = useState([]);
+
+    const handleVisitedCountries = country => {
+        const newVisitedCountry = [...visitedCountries, country]
+        setVisitedCountries(newVisitedCountry);
+    }  card e add korar niyom
 
 
 

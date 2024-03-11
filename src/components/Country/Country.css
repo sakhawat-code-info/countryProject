@@ -8,3 +8,11 @@ img {
     width: 150px;
     height: 150px;
 }
+
+
+.visitedCountry {
+    background-color: red;
+    border: 2px solid red;
+    padding: 20px;
+    border-radius: 12px;
+}

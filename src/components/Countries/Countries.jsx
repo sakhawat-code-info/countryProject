@@ -19,15 +19,37 @@ const Countries = () => {
         loadCountryData();
     }, []);
 
+
+    const [visitedCountries, setVisitedCountries] = useState([]);
+
+    const handleVisitedCountries = country => {
+        const newVisitedCountry = [...visitedCountries, country]
+        setVisitedCountries(newVisitedCountry);
+    }
+
+
+
     return (
         <div>
             <h2>All Countries {countries.length}</h2>
+
+            <div>
+                Already visited {visitedCountries.length}
+                <ul>
+                    {
+                        visitedCountries.map(country => <li>{country.name.common}</li>)
+                    }
+                </ul>
+            </div>
+
 
             <div className="flagContainer">
                 {
                     countries.map(country => <Country
                         key={country.cca3}
-                        country={country}></Country>)
+                        country={country}
+                        handleVisitedCountries={handleVisitedCountries}
+                    ></Country>)
                 }
 
             </div>
